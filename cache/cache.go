@@ -3,7 +3,7 @@ package cache
 import (
 	"sync"
 
-	"github.com/dmaizel/distributed-cache/lru"
+	"github.com/dmaizel/distributed-cache/cache/lru"
 )
 
 type cache struct {
