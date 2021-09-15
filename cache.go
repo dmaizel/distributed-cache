@@ -12,7 +12,7 @@ type cache struct {
 	cacheBytes int64
 }
 
-func (c *cache) Add(key string, value ByteView) {
+func (c *cache) add(key string, value ByteView) {
 	c.Lock()
 	defer c.Unlock()
 
@@ -23,7 +23,7 @@ func (c *cache) Add(key string, value ByteView) {
 	c.lru.Add(key, value)
 }
 
-func (c *cache) Get(key string) (value ByteView, ok bool) {
+func (c *cache) get(key string) (value ByteView, ok bool) {
 	c.Lock()
 	defer c.Unlock()
 

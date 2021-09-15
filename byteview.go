@@ -21,6 +21,6 @@ func (v ByteView) String() string {
 
 func cloneBytes(b []byte) []byte {
 	c := make([]byte, len(b))
-	copy(b, c)
+	copy(c, b)
 	return c
 }
