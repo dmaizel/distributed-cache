@@ -16,10 +16,10 @@ type Hash func(data []byte) uint32
 
 // Map contains all hashed keys
 type Map struct {
-	hash     Hash
-	replicas int
-	keys     []int // Sorted
-	hashMap  map[int]string
+	hash     Hash           // Hash function
+	replicas int            // virtual node multiple replicas
+	keys     []int          // Sorted hash ring keys
+	hashMap  map[int]string // virtual node and real node mapping table
 }
 
 // New creates a Map instance
